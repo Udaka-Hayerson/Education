@@ -1,5 +1,5 @@
 # # HOF
-# 
+#
 # # HOF high order function (lo function!')
 #
 # myDecoratedNewFunction = myHOF(sayHello)
