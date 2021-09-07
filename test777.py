@@ -174,3 +174,87 @@ nemo.speak()
 sharic = Dog('Sharic', 1) # Sharic
 sharic.baww()
 sharic.speak()
+
+def mul_two(a: int, b: int) -> int :
+    return a * b
+
+def mul_three(a, b, c):
+    return a * b * c
+
+print(mul_two(30,20))
+print(mul_three(2, 3, 5))
+
+def first_word(text: str) -> str:
+    result = text.split()
+    return result[0]
+
+
+print("Example:")
+print(first_word("Hello world"))
+print(first_word("world Hello"))
+print(first_word("Hello world world world world"))
+
+def is_acceptable_password(password: str) -> bool:
+    if len(password) > 6:
+        return True
+    else:
+        return False
+    # return len(password) > 6
+
+print(is_acceptable_password('short'))
+print(is_acceptable_password('muchlonger'))
+print(is_acceptable_password('ashort'))
+print(is_acceptable_password('ashortgyg'))
+print(is_acceptable_password('ash'))
+print(is_acceptable_password('ashjhfjffh'))
+
+def number_length(a):
+    count = 0
+    a = str(a)
+    for x in a:
+        count += 1
+    return count
+    #return len(str(a))
+
+print("Example:")
+print(number_length(10) ,number_length(1010), number_length(0), number_length(44444), sep='---')
+
+def end_zeros(num: int) -> int:
+    num = str(num)
+    flag = 0
+    for i in num[::-1]:
+        i = int(i)
+        if not i:
+            flag += 1
+            if len(num) == 1:
+                return flag
+        else:
+            return flag
+
+
+print(end_zeros(100000), end_zeros(10000), end_zeros(1000), end_zeros(100), end_zeros(0), end_zeros(1),
+      sep=' and ', end=' Shatle Misiooon - Start!')
+
+
+def remove_all_before(items, border):
+    if not border in items:
+        return items
+    if items == []:
+        return items
+    if items[0] == border:
+        return items
+    cnt = 0
+    for i in items:
+        if i == border:
+            return items[cnt:]
+        cnt += 1
+
+
+
+print("Example:")
+print(list(remove_all_before([1, 2, 3, 4, 5], 3)),
+      list(remove_all_before([1, 1, 2, 2, 3, 3], 2)),
+      list(remove_all_before([1, 1, 2, 4, 2, 3, 4], 2)),
+      list(remove_all_before([1, 1, 5, 6, 7], 2)),
+      list(remove_all_before([], 0)),
+      list(remove_all_before([7, 7, 7, 7, 7, 7, 7, 7, 7], 7)), sep= '\n')
