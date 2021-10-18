@@ -72,25 +72,25 @@ print(manan, mana, man, ma, sep='\n')
 
 from datetime import datetime as dt
 
-class Player:
-
-    __LVL, __HEALTH = 1, 100
-    __slots__ = ['__lvl', '__health', '__born']
-
-    def __init__(self):
-        __lvl = Player.__LVL
-        __health = Player.__HEALTH
-        __born = dt.now()
-
-    def get_lvl(self):
-        return self.__lvl
-
-    def set_lvl(self, numeric):
-        self.__lvl += numeric
-
-
-x = Player()
-print(x.get_lvl())
+# class Player:
+#
+#     __LVL, __HEALTH = 1, 100
+#     __slots__ = ['__lvl', '__health', '__born']
+#
+#     def __init__(self):
+#         __lvl = Player.__LVL
+#         __health = Player.__HEALTH
+#         __born = dt.now()
+#
+#     def get_lvl(self):
+#         return self.__lvl
+#
+#     def set_lvl(self, numeric):
+#         self.__lvl += numeric
+#
+#
+# x = Player()
+# print(x.get_lvl())
 
 
 class Animal:
@@ -539,3 +539,29 @@ if __name__ == '__main__':
     assert count_digits('5 plus 6 is') == 2
     assert count_digits('') == 0
     print("Coding complete? Click 'Check' to earn cool rewards!")
+
+def total(a=5, *numbers, **phonebook):
+    print(a, 'a')
+
+    for single_item in numbers:
+        print('single_item', single_item)
+
+    for first_part, second_part in phonebook.items():
+        print(first_part, second_part)
+total(10,1,2,3,Jack=1123,John=2231,Inge=1560)
+
+def specagent(*, extra_value=333):
+    print(extra_value)
+specagent(extra_value=444)
+
+xaxaxa = None
+print('I am number ' + ((str(xaxaxa).replace('N', '') + ' ') * 9))
+
+def specagent(*, xaxaxa):
+    xaxaxa = None
+    print('Иди в жопу , Колюня во всём номер ' + ((str(xaxaxa).replace('N', '') + ' ') * 9))
+specagent(xaxaxa=input('Скажи свое имя чемпион : '))
+
+
+
+
